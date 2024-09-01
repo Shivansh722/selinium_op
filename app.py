@@ -23,7 +23,7 @@ def automate_gmail_login(email, password, recipient_name):
     time.sleep(2)
 
     # Type the recipient's name in the 'To' field
-    to_field = driver.find_element(By.ID, ":st")  # Updated to use the name attribute
+    to_field = driver.find_element(By.XPATH, '/html/body/div[20]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/input')  # Updated to use the name attribute
     to_field.send_keys(recipient_name)
     time.sleep(2)  # Wait for suggestions to appear
 
